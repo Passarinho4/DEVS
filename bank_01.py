@@ -1,9 +1,13 @@
-""" bank01: The single non-random Customer """           
-from SimPy.Simulation import *                           
+""" bank01: The single non-random Customer """
 
-## Model components -----------------------------        
 
-class Customer(Process):                                 
+## Model components -----------------------------
+from SimPy.Globals import now, initialize, activate, simulate
+from SimPy.Lib import Process
+from SimPy.Simulation import hold
+
+
+class Customer(Process):
     """ Customer arrives, looks around and leaves """
         
     def visit(self,timeInBank):                          
